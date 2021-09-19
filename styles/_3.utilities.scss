@@ -1,0 +1,129 @@
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  line-height: 1.9;
+  background-color: #ffcad4;
+}
+
+.container {
+  display: grid;
+  grid-template-columns:
+    [container-start] 1fr [center-start]
+    repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end])
+    [center-end] 1fr [container-end];
+  grid-template-rows: min-content 90vh repeat(9, min-content);
+
+  // Media Query 800 Mark Tablet
+
+  @include media-tablet {
+    grid-template-rows: min-content 100vh repeat(9, min-content);
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: font-weight(font-weight-light);
+  letter-spacing: 0.2rem;
+  font-size: font-size(font-size-regular);
+}
+
+i {
+  color: var(--primary);
+  font-size: font-size(font-size-medium);
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  // background: var(--quaternary);
+  margin: 0.5rem;
+  font-size: calc(0.6rem + 1vw);
+  text-transform: uppercase;
+  font-weight: font-weight(medium);
+  line-height: 6rem;
+  height: 6rem;
+  width: 24rem;
+  border-radius: 5rem;
+
+  &.btn-1 {
+    background: linear-gradient(
+      to bottom,
+      var(--quinary-light),
+      var(--quinary-light) 50%,
+      var(--quinary) 90%
+    );
+    color: var(--quaternary);
+    transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    &:hover {
+      color: var(--quaternary-light);
+    }
+  }
+  &.btn-2 {
+    background: linear-gradient(
+      to bottom,
+      var(--quaternary),
+      var(--quaternary) 50%,
+      var(--quaternary-dark) 70%,
+      var(--quaternary-dark) 85%
+    );
+    color: var(--quinary-light);
+    transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    &:hover {
+      color: var(--quaternary-light);
+    }
+  }
+
+  &.btn-3 {
+    background: var(--quaternary);
+    font-weight: font-weights(medium);
+    // background: linear-gradient(
+    //   to bottom,
+    //   var(--quaternary),
+    //   var(--quaternary) 50%,
+    //   var(--quaternary-dark) 90%
+    // );
+    border: 0.3rem var(--quaternary-dark) solid;
+    color: var(--quaternary-light);
+    box-shadow: 0rem 0.2rem 0.5rem var(--quaternary-dark),
+      0rem 0.2rem 1rem var(--quaternary-dark);
+    transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    &:hover,
+    &:active {
+      border-color: var(--quaternary);
+      box-shadow: 0rem 0.2rem 1rem var(--quaternary-dark),
+        0rem 0.2rem 1.5rem var(--quaternary-dark);
+    }
+  }
+  &.btn-4 {
+    background: var(--quinary-light);
+    font-weight: font-weights(medium);
+    // background: linear-gradient(
+    //   to bottom,
+    //   var(--quaternary),
+    //   var(--quaternary) 50%,
+    //   var(--quaternary-dark) 90%
+    // );
+    border: 0.3rem var(--quinary) solid;
+    color: var(--quinary);
+    box-shadow: 0rem 0.2rem 0.5rem var(--quinary-dark),
+      0rem 0.2rem 1rem var(--quinary-dark);
+    transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    &:hover,
+    &:active {
+      border-color: var(--quinary-light);
+      box-shadow: 0rem 0.2rem 1rem var(--quinary-dark),
+        0rem 0.2rem 1.5rem var(--quinary-dark);
+    }
+  }
+}

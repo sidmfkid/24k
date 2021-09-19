@@ -1,0 +1,49 @@
+.checklist {
+  width: 100%;
+
+  @extend %sec-padding;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/alternating-arrowhead.svg);
+    z-index: -1;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 2rem 2rem;
+
+    border: 0.1rem solid var(--quaternary-dark);
+    border-radius: 5rem;
+
+    background: linear-gradient(
+      to bottom,
+      var(--quaternary) 2%,
+      var(--quaternary) 97%,
+      var(--quaternary-light) 100%
+    );
+
+    box-shadow: 0rem -1rem 5rem var(--quaternary-dark),
+      0rem -0.5rem 1rem var(--quaternary-dark);
+    i {
+      font-size: 5rem;
+      color: var(--quaternary-light);
+    }
+    span {
+      margin: 0 0 0 3rem;
+      font-size: font-size(regular);
+      color: var(--quaternary-light);
+    }
+  }
+}

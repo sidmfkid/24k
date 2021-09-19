@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Satisfy&display=swap");
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Courgette", cursive;
+  color: #B38885;
+}
+
+.bg-light {
+  background-color: #FFD0EE !important;
+}
+
+.container-fluid.header {
+  background-color: #FFD0EE;
+}
+
+.container-fluid.header .row .col .logo {
+  width: 250px;
+}
+
+.nav-item {
+  font-family: "Satisfy", cursive;
+  font-size: 1.5rem;
+  color: #B38885;
+}
+
+.nav-item::before {
+  color: #B38885 !important;
+}
+
+.nav-item.border-bottom {
+  border-color: #F4E7CF !important;
+}
+
+.hero {
+  background-color: #FFD0EE;
+  height: 900px;
+}
+
+.hero .container .row .col h1 {
+  font-family: "Courgette", cursive;
+  color: #B38885;
+}
+
+.hero .container .row.hero-text p {
+  font-family: "Courgette", cursive;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=page.css.map */

@@ -1,0 +1,35 @@
+.footer {
+  border-top: 0.1rem solid var(--quaternary-dark);
+  position: fixed;
+  width: 100%;
+  @extend %sec-padding;
+  position: relative;
+  z-index: 10rem;
+  //   background-color: var(--secondary);
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    // align-items: flex-start;
+    flex-wrap: wrap;
+    &--logo {
+      width: 20rem;
+      margin: 0 auto;
+    }
+
+    &--links {
+      width: 40rem;
+      font-size: font-size(small);
+      margin: 2rem auto 2rem auto;
+      > a {
+        display: block;
+        text-align: center;
+      }
+    }
+    &--contact {
+      width: 40rem;
+      font-size: font-size(small);
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.services {
+  @extend %sec-padding;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  align-items: stretch;
+
+  // background: var(--quaternary-light);
+  &__card {
+    // border: 0.2rem solid var(--quaternary-dark);
+    border-radius: 5rem;
+    // flex: 1 1 auto;
+    width: calc(35rem + 6vw);
+    padding: 3rem;
+    margin: 0 1rem 4rem 1rem;
+
+    // background: linear-gradient(
+    //   to bottom,
+    //   var(--quaternary) 2%,
+    //   var(--quaternary) 98%,
+    //   var(--quaternary-light) 100%
+    // );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0.5rem -0.5rem 1rem var(--quaternary-dark),
+      0.5rem -1rem 5rem var(--quaternary-dark);
+    a {
+      display: block;
+      margin-top: 5rem;
+    }
+    &:nth-of-type(1) {
+      div {
+        background: url(https://images.unsplash.com/photo-1610992015836-7c249d75782d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80);
+        width: 100%;
+        height: 30rem;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        border-radius: 5rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &:nth-of-type(2) {
+      div {
+        background: url(https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
+        width: 100%;
+        height: 30rem;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        border-radius: 5rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &:nth-of-type(3) {
+      div {
+        background: url(https://images.unsplash.com/photo-1619607146034-5a05296c8f9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1234&q=80);
+        width: 100%;
+        height: 30rem;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        border-radius: 5rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    h3 {
+      text-align: center;
+      font-size: font-size(regular);
+    }
+    p {
+      font-size: font-size(small);
+    }
+  }
+}
